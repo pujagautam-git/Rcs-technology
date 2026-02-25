@@ -1,0 +1,118 @@
+.highlight-wrapper {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  padding: 20px;
+  gap: 20px;
+  
+}
+
+.highlight-card {
+  position: relative;
+  flex: 1;
+  /* gap:20px; */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;      
+  justify-content: center;  
+  transition: transform 0.6s ease;
+}
+
+/* Smooth zoom on hover */
+.highlight-card:hover {
+  transform: scale(1.01);
+
+}
+
+.highlight-overlay {
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0.2) 100%
+  ); */
+  transition: background 0.4s ease;
+}
+
+.highlight-card:hover .highlight-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 20%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.highlight-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px;
+  color: #ffffff;
+  text-align: center;
+ font-family: inherit;
+}
+
+/* .align-left {
+
+  text-align:center;
+}
+
+.align-right {
+  text-align: center;
+
+} */
+
+.highlight-title {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.highlight-subtitle {
+  margin-top: 5px;
+  font-size: 21px;
+  /* letter-spacing: 2px; */
+  color: #dddddd;
+}
+
+.highlight-button {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 14px 40px;
+  background: #f2e600;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.highlight-button:hover {
+  background: #fff200;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .highlight-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .highlight-card {
+    height: 70vh;
+  }
+
+  .highlight-content {
+    padding: 40px;
+  }
+
+  .highlight-title {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,84 @@
+
+
+{
+  "category": "Gaming Keyboards",
+
+  "productsCategories": [
+    {
+      "id": 1,
+      "title": "Wireless Gaming Keyboards",
+      "image": "/images/products/key1.avif"
+    },
+    {
+      "id": 2,
+      "title": "Wired Gaming Keyboards",
+      "image": "/images/products/key2.avif"
+    },
+    {
+      "id": 3,
+      "title": "60% Keyboards",
+      "image": "/images/products/key3.avif"
+    },
+    {
+      "id": 4,
+      "title": "75% Keyboards",
+      "image": "/images/products/key4.avif"
+    },
+    {
+      "id": 5,
+      "title": "TKL Gaming Keyboards",
+      "image": "/images/products/key5.avif"
+    }
+  ],
+
+  "categoryList": [
+    "All Products",
+    "Wireless Gaming Keyboards",
+    "Wired Gaming Keyboards",
+    "TKL Gaming Keyboards",
+    "Rapid Trigger Keyboards",
+    "75% Keyboards",
+    "60% Keyboards"
+  ],
+
+  "filters": {
+    "connectivity": ["Wired", "Wireless"],
+    "size": ["60%", "75%", "TKL", "Full Size"],
+    "switchType": ["Mechanical", "Optical"],
+    "color": ["Black", "White"],
+    "reportRate": ["1000Hz", "8000Hz"],
+    "mediaControls": ["Yes", "No"],
+    "wristRest": ["Included", "Not Included"]
+  },
+
+  "products": [
+    {
+      "id": 1,
+      "name": "GALLEON 100 RGB",
+      "price": 120,
+      "image": "/images/products/key1.avif",
+      "category": "Wireless Gaming Keyboards",
+      "connectivity": "Wireless",
+      "size": "TKL",
+      "switchType": "Mechanical",
+      "color": "Black",
+      "reportRate": "1000Hz",
+      "mediaControls": "Yes",
+      "wristRest": "Included"
+    },
+    {
+      "id": 2,
+      "name": "K65 PLUS",
+      "price": 150,
+      "image": "/images/products/key4.avif",
+      "category": "60% Keyboards",
+      "connectivity": "Wired",
+      "size": "60%",
+      "switchType": "Optical",
+      "color": "White",
+      "reportRate": "8000Hz",
+      "mediaControls": "No",
+      "wristRest": "Not Included"
+    }
+  ]
+}

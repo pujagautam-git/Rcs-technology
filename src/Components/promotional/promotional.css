@@ -1,0 +1,124 @@
+.promo-section {
+  background-color: #0b0f1a;
+  padding:60px 80px;
+  /* font-family: inherit; */
+  /* font-family: "Inter", "Helvetica Neue", Arial, sans-serif; */
+}
+
+/* MAIN WRAPPER */
+.promo-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 650px;
+  gap: 20px;
+}
+.promo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.promo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* text + image */
+  flex: 1;
+  background: #141827;
+}
+/* ======================
+   LEFT SIDE
+====================== */
+
+.promo-left {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.promo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 10, 20, 0.95),
+    rgba(8, 10, 20, 0.2)
+  );
+}
+
+.promo-left-content {
+  position: relative;
+  padding: 40px;
+  color: #fff;
+}
+
+.promo-left-content h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.promo-left-content p {
+  font-size: 15px;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.promo-left-content a {
+  color: #ece81a;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* ======================
+   RIGHT SIDE
+====================== */
+
+.promo-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.promo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  background: #141827;
+}
+
+.promo-text {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.promo-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.promo-text p {
+  font-size: 16px;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.promo-text a {
+  color: #ece81a;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.promo-image {
+  background-size: cover;
+  background-position: center;
+}
