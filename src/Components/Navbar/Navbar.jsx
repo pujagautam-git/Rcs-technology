@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { FiSearch } from "react-icons/fi";
-import {
-  FaDesktop,
-  FaKeyboard,
-  FaGamepad,
-  FaChair,
-  FaShoppingCart,
-} from "react-icons/fa";
 import { menuData } from "../data/menuData";
 
+// ✅ Import AVIF images normally
+import pcIcon from "../../assets/icons/pcicon.avif";
+import gearIcon from "../../assets/icons/keyboard.avif";
+import furnitureIcon from "../../assets/icons/chair.avif";
+import pcbuildIcon from "../../assets/icons/monitor.avif";
+import shopIcon from "../../assets/icons/shop.avif";
+
+
+// ✅ Image map
 const iconMap = {
-  pc: <FaDesktop />,
-  gear: <FaKeyboard />,
-  pcbuild: <FaGamepad />,
-  furniture: <FaChair />,
-  shop: <FaShoppingCart />,
+  pc: pcIcon,
+  gear: gearIcon,
+  pcbuild: pcbuildIcon,
+  furniture: furnitureIcon,
+  shop: shopIcon,
 };
 
 const Navbar = () => {
@@ -23,11 +25,10 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-       <div className="search">
+      {/* SEARCH ICON */}
+      <div className="search">
         <FiSearch />
       </div>
-      {/* LOGO */}
-     
 
       {/* CENTER MENU */}
       <nav className="nav-links">
@@ -44,8 +45,14 @@ const Navbar = () => {
               <div className="mega-menu">
                 {item.columns.map((col, index) => (
                   <div key={index} className="mega-column">
+                    
+                    {/* ✅ IMAGE ICON */}
                     <div className="mega-icon">
-                      {iconMap[col.icon]}
+                      <img
+                        src={iconMap[col.icon]}
+                        alt={col.heading}
+                        className="mega-img"
+                      />
                     </div>
 
                     <h4>{col.heading}</h4>
@@ -60,8 +67,9 @@ const Navbar = () => {
           </div>
         ))}
       </nav>
- <div className="logo">CORSAIR</div>
-      
+
+      {/* LOGO */}
+      <div className="logo">CORSAIR</div>
     </header>
   );
 };

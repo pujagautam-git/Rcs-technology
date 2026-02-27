@@ -1,6 +1,16 @@
 // ShopByCategory.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import Case from "../../assets/shopcategory/case.avif";
+import GamingPC from "../../assets/shopcategory/gamingpc.avif";
+import Memory from "../../assets/shopcategory/memory.avif";
+import Keyboard from "../../assets/shopcategory/keyboard.avif";
+import Headset from "../../assets/shopcategory/headset.avif";
+import PowerSupply from "../../assets/shopcategory/pcu.avif";
+import Cooling from "../../assets/shopcategory/cooler.avif";
+import Mouse from "../../assets/shopcategory/mouse.avif";
+import Fans from "../../assets/shopcategory/fans.avif";
+import Chair from "../../assets/shopcategory/chair.avif";
 import "./shopcategory.css";
 
 const ShopByCategory = () => {
@@ -10,61 +20,61 @@ const shopCategories = [
   {
     id: 1,
     title: "Cases",
-    image: "/images/categories/case.png",
+    image: Case,
     slug: "/category/cases"
   },
   {
     id: 2,
     title: "Gaming PCs",
-    image: "/images/categories/gaming-pc.png",
+    image: GamingPC,
     slug: "/category/gaming-pcs"
   },
   {
     id: 3,
     title: "Memory",
-    image: "/images/categories/memory.png",
+    image: Memory,
     slug: "/category/memory"
   },
   {
     id: 4,
     title: "Keyboards",
-    image: "/images/categories/keyboard.png",
+    image: Keyboard,
     slug: "/category/keyboards"
   },
   {
     id: 5,
     title: "Headsets",
-    image: "/images/categories/headset.png",
+    image: Headset,
     slug: "/category/headsets"
   },
   {
     id: 6,
     title: "Power Supply",
-    image: "/images/categories/psu.png",
+    image: PowerSupply,
     slug: "/category/power-supply"
   },
   {
     id: 7,
     title: "Cooling",
-    image: "/images/categories/cooling.png",
+    image: Cooling,
     slug: "/category/cooling"
   },
   {
     id: 8,
     title: "Mouse",
-    image: "/images/categories/mouse.png",
+    image: Mouse,
     slug: "/category/mouse"
   },
   {
     id: 9,
     title: "Fans",
-    image: "/images/categories/fan.png",
+    image: Fans,
     slug: "/category/fans"
   },
   {
     id: 10,
     title: "Chairs",
-    image: "/images/categories/chairs.png",
+    image: Chair,
     slug: "/category/chairs"
   }
 ];
