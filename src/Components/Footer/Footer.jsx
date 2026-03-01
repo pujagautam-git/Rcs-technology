@@ -1,5 +1,6 @@
 // Footer.jsx
 import React from "react";
+import ftrlogo from "../../assets/nav/logo.png";
 // import { footerData } from "./footerData";
 import "./Footer.css";
 
@@ -56,8 +57,8 @@ const Footer = () => {
       title: "SUPPORT",
       links: [
         "Downloads",
-        "Corsair Web Hub",
-        "Firmware Update Utility",
+        // "Corsair Web Hub",
+        // "Firmware Update Utility",
         "Customer Support",
         "Warranty",
         "Shipping/RMA/Returns",
@@ -78,7 +79,7 @@ const Footer = () => {
         {/* Left Newsletter */}
         <div className="footer-newsletter">
           <img
-            src="/images/logo-white.svg"
+            src={ftrlogo}
             alt="Logo"
             className="footer-logo"
           />

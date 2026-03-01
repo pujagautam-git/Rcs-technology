@@ -5,6 +5,7 @@
   padding: 40px 60px;
   background: #0f0f0f;
   color: #fff;
+  font-family: inherit;
 }
 
 /* LEFT THUMBNAILS */
@@ -133,7 +134,8 @@
 .overview-full {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
+  font-family: inherit;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -142,7 +144,7 @@
 
 .overlay {
   color: white;
-  max-width: 500px;
+  max-width: 700px;
 }
 
 .overlay.left {
@@ -157,12 +159,14 @@
 }
 
 .overlay h2 {
-  font-size: 48px;
+  font-size: 80px;
   margin-bottom: 20px;
+  font-family: "Saira", sans-serif;
+  font-weight: 300;
 }
 
 .overlay p {
-  font-size: 20px;
+  font-size: 36px;
   margin-bottom: 25px;
 }
 
@@ -178,7 +182,7 @@
 
 .overview-center {
   text-align: center;
-  padding: 100px 0;
+  padding: 30px 0;
   background: #000;
   color: white;
 }
@@ -186,11 +190,14 @@
 .overview-center h2 {
   font-size: 40px;
   margin-bottom: 50px;
+  font-family: inherit;
+
 }
 
 .overview-center img {
-  width: 60%;
-  max-width: 900px;
+  /* width: 500px; */
+  max-width: 90%;
+  padding-top: 0;
 }
 
 .feature-left img {
@@ -210,4 +217,44 @@
 .feature-right p {
   color: #ccc;
   line-height: 1.6;
+}
+
+/* ============ TECH SPECS SECTION ============ */
+
+.tech-specs-section {
+  background: #000;
+  color: #fff;
+  padding: 100px 8%;
+}
+
+.tech-title {
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: 4px;
+  margin-bottom: 80px;
+}
+
+/* 2 Column Layout */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 80px;
+}
+
+/* Each Row */
+.tech-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+.tech-label {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.tech-value {
+  font-size: 16px;
+  text-align: right;
 }

@@ -47,7 +47,26 @@ const product = {
       "subtitle": "Premium mechanical switches with elite performance.",
       "buttonText": "Learn More"
     }
-  ]
+  ],
+  "techSpecs": [
+  { "label": "Keyboard CUE Software", "value": "Supported in iCUE" },
+  { "label": "Media and Volume Controls", "value": "Yes" },
+  { "label": "Keyboard Size", "value": "Compact" },
+  { "label": "Keyboard Report Rate", "value": "1000Hz" },
+  { "label": "Onboard Profiles", "value": "4" },
+  { "label": "Adjustable Height", "value": "Yes" },
+  { "label": "Battery Charging", "value": "USB to Computer" },
+  { "label": "Keyboard Battery Type", "value": "Rechargeable Lithium-Ion" },
+  { "label": "Keyboard Battery Life", "value": "Up to 266 hours with LEDs off" },
+  { "label": "Wired Connectivity", "value": "USB 3.0 or 3.1 Type-A" },
+  { "label": "Keyboard Cable Material", "value": "Braided" },
+  { "label": "WIN Lock", "value": "Yes" },
+  { "label": "Key Rollover", "value": "Full Key (NKRO) with 100% Anti-Ghosting" },
+  { "label": "Key Switches", "value": "CORSAIR MLX Red" },
+  { "label": "Keyboard Layout", "value": "NA (North America)" },
+  { "label": "Keyboard Warranty", "value": "2 Year" },
+  { "label": "Weight", "value": "0.953kg" }
+]
   
 };
 
@@ -231,7 +250,22 @@ const SingleProduct = () => {
   </div>
 )}
            
-          {activeTab === "specs" && <div>Tech Specs Coming Soon</div>}
+       {activeTab === "specs" && (
+  <div className="tech-specs-section">
+
+    <h2 className="tech-title">TECH SPECS</h2>
+
+    <div className="tech-grid">
+      {product.techSpecs.map((spec, index) => (
+        <div key={index} className="tech-row">
+          <span className="tech-label">{spec.label}</span>
+          <span className="tech-value">{spec.value}</span>
+        </div>
+      ))}
+    </div>
+
+  </div>
+)}
           {activeTab === "downloads" && <div>Downloads Coming Soon</div>}
           {activeTab === "package" && <div>Package Contents Coming Soon</div>}
 

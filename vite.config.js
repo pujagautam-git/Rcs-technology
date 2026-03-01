@@ -1,7 +1,23 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
+
+  return {
+    plugins: [react()],
+    server: {
+      port: parseInt(env.VITE_PORT) || 5173,
+      host: true,
+      proxy: {
+        // Proxy everything that starts with /api to the Frappe backend
+        '/api': {
+         
+          target: env.VITE_API_URL,
+          changeOrigin: true,
+          secure: false,          
+        },
+      },
+    },
+  }
 })

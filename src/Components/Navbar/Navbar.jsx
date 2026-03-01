@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import logo from "../../assets/nav/logo.png";
 import { FiSearch } from "react-icons/fi";
 import { menuData } from "../data/menuData";
 
@@ -9,6 +10,7 @@ import gearIcon from "../../assets/icons/keyboard.avif";
 import furnitureIcon from "../../assets/icons/chair.avif";
 import pcbuildIcon from "../../assets/icons/monitor.avif";
 import shopIcon from "../../assets/icons/shop.avif";
+import { Link } from "react-router-dom";
 
 
 // ✅ Image map
@@ -69,7 +71,12 @@ const Navbar = () => {
       </nav>
 
       {/* LOGO */}
-      <div className="logo">CORSAIR</div>
+      <div className="logo">
+        <Link to="/">
+      <img src={logo} alt="RCS Logo" className="logo-img" />
+     </Link>
+      </div>
+      
     </header>
   );
 };
