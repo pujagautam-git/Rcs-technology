@@ -119,3 +119,16 @@
   opacity: 1;
   transform: scale(1.05);
 }
+
+.mega-link {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 6px 0;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.mega-link:hover {
+  color: white;
+}

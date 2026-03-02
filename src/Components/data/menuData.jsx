@@ -7,16 +7,19 @@ export const menuData = [
         icon: "pc",
         heading: "PC COMPONENTS",
         links: [
+          {
           // "Cases",
           // "iCUE LINK",
           // "CPU & AIO Coolers",
           // "Case Fans",
-          "Custom Liquid Cooling",
+          label: "Custom Liquid Cooling",
+           path: "/custom-cooling",
           // "Memory",
           // "SSDs & Storage",
           // "Power Supply Units",
           // "Hubs & Docks",
           // "Accessories",
+          }
         ],
       },
       {

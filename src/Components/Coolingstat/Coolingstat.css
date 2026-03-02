@@ -1,0 +1,51 @@
+.cooling-stats-section {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  background-size: cover;
+  /* background-position: center; */
+  text-align: center;
+  color: white;
+}
+
+.cooling-stats-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(74, 74, 74, 0.85),
+    /* rgba(0, 0, 0, 0.6) */
+  );
+  z-index: 1;
+}
+
+.cooling-stats-container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cooling-stat-item {
+  flex: 1;
+  min-width: 200px;
+  margin: 30px 0;
+}
+
+.cooling-stat-number {
+  font-size: 60px;
+  font-weight: 800;
+  color: #00e0ff;
+  margin-bottom: 10px;
+}
+
+.cooling-stat-label {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #ccc;
+}

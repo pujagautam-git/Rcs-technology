@@ -60,7 +60,9 @@ const Navbar = () => {
                     <h4>{col.heading}</h4>
 
                     {col.links.map((link, i) => (
-                      <p key={i}>{link}</p>
+                     <Link key={i} to={link.path} className="mega-link">
+  {link.label}
+</Link>
                     ))}
                   </div>
                 ))}
