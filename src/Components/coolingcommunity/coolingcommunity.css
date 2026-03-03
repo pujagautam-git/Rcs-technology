@@ -1,0 +1,86 @@
+.cooling-community {
+  width: 100%;
+  padding: 120px 0;
+  background: linear-gradient(
+    90deg,
+    #0b1a23 0%,
+    #0e202b 50%,
+    #0b1a23 100%
+  );
+}
+
+.cooling-community-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.cooling-community-left {
+  flex: 1;
+}
+
+.cooling-community-left img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cooling-community-right {
+  flex: 1;
+  background: #0a0f14;
+  padding: 60px;
+  color: white;
+}
+
+.community-label {
+  color: #d4ff00;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.community-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.community-text {
+  font-size: 16px;
+  color: #b5b5b5;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.community-btn {
+  background: #d4ff00;
+  color: black;
+  padding: 14px 28px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.community-btn:hover {
+  background: white;
+}
+
+@media (max-width: 992px) {
+  .cooling-community-container {
+    flex-direction: column;
+  }
+
+  .cooling-community-right {
+    padding: 40px;
+  }
+
+  .community-title {
+    font-size: 32px;
+  }
+}

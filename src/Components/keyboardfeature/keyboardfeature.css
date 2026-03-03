@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000;
+}
+
+.keyboard-page {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+/* NAV */
+.keyboard-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 20px 48px;
+  background: #000;
+  border-bottom: 1px solid #222;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding-bottom: 8px;
+}
+
+.nav-item.active {
+  color: #f1f500;
+  border-bottom: 2px solid #f1f500;
+}
+
+.shop-all {
+  margin-left: auto;
+  background: #f1f500;
+  border: none;
+  padding: 10px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.keyboard-section {
+  min-height: 100vh;
+  padding: 90px 64px;
+}
+
+.keyboard-section h1 {
+  font-size: 42px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  color: #bbb;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* FEATURED GRID */
+.featured-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 40px;
+}
+
+.keyboard-card {
+  background: linear-gradient(180deg, #111, #0b0b0b);
+  padding: 40px;
+  border: 1px solid #222;
+  position: relative;
+}
+
+.keyboard-card h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.keyboard-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.keyboard-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.keyboard-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #222;
+  font-size: 14px;
+}
+
+.keyboard-card button {
+  margin-top: 20px;
+  background: #f1f500;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: #f1f500;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+
+/* SIMPLE LIST */
+.simple-list {
+  margin-top: 40px;
+  padding-left: 20px;
+}
+
+.simple-list li {
+  margin-bottom: 10px;
+  color: #ccc;
+}

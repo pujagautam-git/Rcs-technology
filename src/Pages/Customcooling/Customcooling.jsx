@@ -4,6 +4,7 @@ import bgimage from "../../assets/cooling/hero-bg.avif";
 import rightimage from "../../assets/cooling/rightimage.avif";
 import CoolingStatsSection from "../../Components/Coolingstat/Coolingstat";
 import PerformanceSection from "../../Components/performanceSection/performanceSection";
+import CoolingCommunitySection from "../../Components/coolingcommunity/coolingcommunity";
 import "./Customcooling.css";
 
 const coolingData =
@@ -13,10 +14,10 @@ const coolingData =
     "title": "CUSTOM LIQUID COOLING",
     "subtitle": "EXTREME CUSTOM COOLING FOR YOUR GAMING PC",
     "backgroundImage": bgimage,
-    "rightImage": rightimage,
+    "rightImage": rightimage, 
     "buttonText": "SHOP NOW",
     "buttonLink": "/shop/liquid-cooling"
-  }
+  }  
 }
 const CustomSection = () => {
   const data = coolingData.hero; // ✅ FIX HERE
@@ -51,6 +52,7 @@ const CustomSection = () => {
     </section>
     <CoolingStatsSection/>
     <PerformanceSection/>
+    <CoolingCommunitySection/>
     </>
   );
 };
