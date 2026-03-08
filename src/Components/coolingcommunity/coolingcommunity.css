@@ -1,14 +1,20 @@
+/* =============================
+   COOLING COMMUNITY SECTION
+============================= */
+
 .cooling-community {
   width: 100%;
   padding: 120px 0;
   background: linear-gradient(
     90deg,
-    #0b1a23 0%,
-    #0e202b 50%,
-    #0b1a23 100%
+    #070707 0%,
+    #0d0d0d 50%,
+    #070707 100%
   );
+  color: var(--white);
 }
 
+/* MAIN CONTAINER */
 .cooling-community-container {
   width: 90%;
   max-width: 1400px;
@@ -18,60 +24,100 @@
   gap: 60px;
 }
 
+/* LEFT IMAGE */
 .cooling-community-left {
   flex: 1;
+  overflow: hidden;
 }
 
 .cooling-community-left img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
+.cooling-community-left:hover img {
+  transform: scale(1.06);
+}
+
+/* RIGHT CONTENT CARD */
 .cooling-community-right {
   flex: 1;
-  background: #0a0f14;
+  background: #111;
   padding: 60px;
-  color: white;
+  border: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
 }
 
+/* subtle red glow */
+.cooling-community-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(225,6,0,0.25),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.cooling-community-right:hover::before {
+  left: 120%;
+}
+
+/* LABEL */
 .community-label {
-  color: #d4ff00;
+  color: var(--primary-red);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
+/* TITLE */
 .community-title {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 25px;
+  color: var(--white);
 }
 
+/* TEXT */
 .community-text {
   font-size: 16px;
-  color: #b5b5b5;
+  color: #bbbbbb;
   line-height: 1.7;
   margin-bottom: 35px;
 }
 
+/* BUTTON */
 .community-btn {
-  background: #d4ff00;
-  color: black;
-  padding: 14px 28px;
+  background: var(--primary-red);
+  color: var(--white);
+  padding: 14px 30px;
   border: none;
   font-weight: 700;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .community-btn:hover {
-  background: white;
+  background: var(--dark-red);
+  transform: translateY(-2px);
 }
 
+/* RESPONSIVE */
 @media (max-width: 992px) {
+
   .cooling-community-container {
     flex-direction: column;
   }
@@ -81,6 +127,7 @@
   }
 
   .community-title {
-    font-size: 32px;
+    font-size: 34px;
   }
+
 }

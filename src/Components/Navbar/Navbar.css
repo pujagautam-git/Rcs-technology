@@ -2,18 +2,18 @@
 .navbar {
   font-family: "Saira", sans-serif;
   width: 100%;
-  height:70px;
-  background: #000;
-  color: #fff;
+  height: 70px;
+  background: var(--black);
+  color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 60px;
   position: relative;
+  /* border-bottom: 0.px solid var(--border-gray); */
 }
 
 /* LOGO */
-/* LOGO CONTAINER */
 .logo {
   display: flex;
   align-items: center;
@@ -21,19 +21,18 @@
   cursor: pointer;
 }
 
-/* LOGO IMAGE */
 .logo-img {
-  height: 55px;          /* control logo size */
+  height: 55px;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .logo:hover .logo-img {
   transform: scale(1.05);
   opacity: 0.9;
 }
+
 /* CENTER LINKS */
 .nav-links {
   display: flex;
@@ -47,19 +46,25 @@
   cursor: default;
   font-weight: 500;
   text-transform: uppercase;
-  color: #fff;
-  /* padding-bottom: 5px; */
+  color: var(--white);
+  transition: 0.3s;
 }
 
+/* RED underline hover instead of yellow */
 .nav-item:hover {
-  border-bottom: 3px solid #ffd100; /* Yellow underline */
+  border-bottom: 3px solid var(--primary-red);
 }
-
 
 /* SEARCH */
 .search {
   font-size: 20px;
   cursor: pointer;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.search:hover{
+  color: var(--primary-red);
 }
 
 /* MEGA MENU */
@@ -68,7 +73,7 @@
   left: 0;
   top: 70%;
   width: 100%;
-  background: #0a0a0a;
+  background: var(--deep-black);
   display: flex;
   justify-content: center;
   padding: 20px 80px;
@@ -86,26 +91,30 @@
 
 .mega-icon {
   font-size: 40px;
-  /* margin-bottom: 5px; */
-  color: #fff;
+  color: var(--white);
 }
-
+.mega-column:hover .mega-icon {
+  opacity: 1;
+  transform: scale(1.05);
+  filter: brightness(0) saturate(100%) invert(19%) sepia(96%) saturate(7481%) hue-rotate(358deg) brightness(93%) contrast(116%);
+}
 .mega-column h4 {
   font-size: 14px;
   margin-bottom: 5px;
-  /* letter-spacing: 1px; */
+  color: var(--white);
 }
 
 .mega-column p {
   font-size: 14px;
-  color: #ccc;
-  /* margin-bottom: 5px; */
+  color: var(--white);
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .mega-column p:hover {
-  color: #ffd100;
+  color: var(--primary-red);
 }
+
 .mega-img {
   width: 70px;
   height: 70px;
@@ -114,15 +123,17 @@
   transition: 0.3s ease;
 }
 
-/* Hover effect */
 .mega-column:hover .mega-img {
   opacity: 1;
   transform: scale(1.05);
-}
 
+}
+.mega-column:hover{
+  color: var(--primary-red);
+}
 .mega-link {
   display: block;
-  color: #ccc;
+  color: var(--white);
   text-decoration: none;
   margin: 6px 0;
   font-size: 14px;
@@ -130,5 +141,5 @@
 }
 
 .mega-link:hover {
-  color: white;
+  color: var(--primary-red);
 }

@@ -6,7 +6,18 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color:#fff;
   font-family: "Saira", sans-serif;
+}
+:root{
+  --primary-red: #E10600;
+  --dark-red: #B80000;
+
+  --black: #000000;
+  --deep-black: #0F0F0F;
+
+  --white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --border-gray: #E5E5E5;
+
+  --text-dark: #1A1A1A;
 }

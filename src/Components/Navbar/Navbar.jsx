@@ -74,7 +74,7 @@ const Navbar = () => {
 
       {/* LOGO */}
       <div className="logo">
-        <Link to="/">
+        <Link to="/#">
       <img src={logo} alt="RCS Logo" className="logo-img" />
      </Link>
       </div>

@@ -46,7 +46,12 @@ export const menuData = [
       {
         icon: "furniture",
         heading: "GAMING FURNITURE",
-        links: ["Desks", "Chairs"],
+        links: [
+            { label: "Desks", path: "/desks" },
+    { label: "Chairs", path: "/chairs" },
+          
+
+        ],
       },
       {
         icon: "shop",
@@ -72,8 +77,9 @@ export const menuData = [
         icon: "pc",
         heading: "PC COMPONENTS",
         links: [
-         "FAQ",
-         "Where to Buy",
+            { label: "FAQ", path: "/faq" },
+    { label: "Where to Buy", path: "/wheretobuy" },
+        
         ],
       },
       
@@ -87,8 +93,9 @@ export const menuData = [
         icon: "pc",
         heading: "PC COMPONENTS",
         links: [
-         "Contact Us",
-         "Become a Partner",
+            { label: "Contact Us", path: "/Contactus" },
+    { label: "Become a Partner", path: "/Become a Partner" },
+         
         ],
       },
       

@@ -21,35 +21,35 @@ const keydata={
         "label": "FEATURED KEYBOARDS",
         "order": 1
       },
-      {
-        "id": "features",
-        "label": "KEY FEATURES",
-        "order": 2
-      },
-      {
-        "id": "corsair",
-        "label": "CORSAIR KEYBOARDS",
-        "order": 3
-      },
-      {
-        "id": "ccl",
-        "label": "CCL",
-        "order": 4
-      },
+         {
+           "id": "features", 
+          "label": "KEY FEATURES",
+           "order": 2 
+          },
+      // {
+      //   "id": "corsair",
+      //   "label": "CORSAIR KEYBOARDS",
+      //   "order": 3
+      // },
+      // { 
+      //   "id": "ccl",
+      //   "label": "CCL",
+      //   "order": 4
+      // },
       {
         "id": "technologies",
         "label": "TECHNOLOGIES",
-        "order": 5
+        "order": 3
       },
       {
         "id": "accessories",
         "label": "ACCESSORIES",
-        "order": 6
+        "order": 4
       },
       {
         "id": "guides",
         "label": "GUIDES & VIDEOS",
-        "order": 7
+        "order": 5
       }
     ],
     "cta": {
@@ -101,31 +101,35 @@ const keydata={
       ]
     },
 
-    {
+      {
       "id": "features",
-      "title": "KEY FEATURES",
-      "type": "content",
-      "items": [
-        "Hot-swappable switches",
-        "Per-key RGB lighting",
-        "Aluminum frame build",
-        "Advanced software control"
+      "title": "KEY FEATURES TO CONSIDER",
+      "subtitle": "CHOOSING THE RIGHT KEYBOARD",
+      "type": "featureCards",
+      "cards": [
+        {
+          "id": "connection",
+          "title": "CONNECTION TYPE",
+          "image": "/images/keyboards/features/connection.jpg"
+        },
+        {
+          "id": "use-case",
+          "title": "YOUR KEYBOARD USE CASE(S)",
+          "image": "/images/keyboards/features/usecase.jpg"
+        },
+        {      
+          "id": "switches",
+          "title": "SWITCHES",
+          "image": "/images/keyboards/features/switches.jpg"
+        }, 
+        {
+          "id": "multi-device",
+          "title": "MULTI-DEVICE CAPABILITY",
+          "image": "/images/keyboards/features/multidevice.jpg"
+        }
       ]
     },
 
-    {
-      "id": "corsair",
-      "title": "CORSAIR KEYBOARDS",
-      "type": "collection",
-      "collectionId": "corsair-keyboards"
-    },
-
-    {
-      "id": "ccl",
-      "title": "CCL",
-      "type": "content",
-      "description": "Corsair Custom Lab keyboards designed for personalization."
-    },
 
     {
       "id": "technologies",
@@ -145,18 +149,33 @@ const keydata={
       "collectionId": "keyboard-accessories"
     },
 
+   {
+  "id": "guides",
+  "title": "GUIDES, TIPS & TRICKS",
+  "ctaText": "CHECK OUT CORSAIR:EXPLORER FOR MORE",
+  "ctaLink": "/explorer",
+  "type": "guidesGrid",
+  "items": [
     {
-      "id": "guides",
-      "title": "GUIDES & VIDEOS",
-      "type": "media",
-      "media": [
-        {
-          "type": "video",
-          "title": "How to Choose the Right Keyboard",
-          "url": "/videos/keyboard-guide.mp4"
-        }
-      ]
+      "id": "galleon-100",
+      "tag": "BLOG",
+      "title": "GALLEON 100 SD: When Keyboard Performance Meets Total Creative Control",
+      "image": "/images/guides/galleon-100.jpg"
+    },
+    {
+      "id": "makr-pro",
+      "tag": "BLOG",
+      "title": "MAKR PRO 75: The Next Evolution of Customizable Hall Effect Performance",
+      "image": "/images/guides/makr-pro.jpg"
+    },
+    {
+      "id": "nuka-cola",
+      "tag": "NEWS",
+      "title": "CORSAIR x Nuka-Cola™: A Special-Edition Drop Bringing Fallout’s Most Iconic Refreshment to Your Battlestation",
+      "image": "/images/guides/nuka-cola.jpg"
     }
+  ]
+}
   ],
 
   "scrollBehavior": {
@@ -263,14 +282,63 @@ const KeyboardFeature= () => {
             </div>
           )}
 
-          {/* SIMPLE CONTENT */}
-          {section.type === "content" && section.items && (
-            <ul className="simple-list">
-              {section.items.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          )}
+{/* FEATURE CARDS */}
+{section.type === "featureCards" && (
+  <div className="feature-wrapper">
+    {section.subtitle && (
+      <p className="feature-subtitle">{section.subtitle}</p>
+    )}
+
+    {/* <h2 className="feature-title">{section.title}</h2> */}
+
+    <div className="feature-scroll">
+      {section.cards.map((card) => (
+        <div
+          key={card.id}
+          className="feature-card"
+          style={{ backgroundImage: `url(${card.image})` }}
+        >
+          <div className="feature-overlay" />
+
+          <div className="feature-content">
+            <h3>{card.title}</h3>
+            <span className="feature-plus">+</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+         
+        
+        {section.type === "guidesGrid" && (
+  <div className="guides-wrapper">
+    {/* <h2 className="guides-title">{section.title}</h2> */}
+
+    {section.ctaText && (
+      <a href={section.ctaLink} className="guides-cta">
+        {section.ctaText} <span>›</span>
+      </a>
+    )}
+
+    <div className="guides-grid">
+      {section.items.map((item) => (
+        <div key={item.id} className="guide-card">
+          <div
+            className="guide-image"
+            style={{ backgroundImage: `url(${item.image})` }}
+          />
+
+          <div className="guide-content">
+            <span className="guide-tag">{item.tag}</span>
+            <h3>{item.title}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
         </section>
       ))}
     </div>

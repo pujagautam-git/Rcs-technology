@@ -1,31 +1,33 @@
 /* ShopByCategory.css */
 
 .shop-category {
-  background: #000;
-  padding: 30px 40px;
+  background: var(--black);
+  padding: 80px 40px;
 }
 
+/* TITLE */
 .shop-category-title {
-  /* font-family: "Saira Expanded", sans-serif; */
   text-align: center;
-  color: #ffffff;
+  color: var(--white);
   font-size: 48px;
   font-weight: 300;
   letter-spacing: 6px;
   margin-bottom: 60px;
 }
 
+/* GRID */
 .shop-category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
 }
 
+/* CARD */
 .category-card {
   background: radial-gradient(
     circle at top,
-    #2a2a2a,
-    #0e0e0e
+    #1f1f1f,
+    var(--deep-black)
   );
   padding: 30px;
   height: 320px;
@@ -33,15 +35,19 @@
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
 }
 
+/* HOVER */
 .category-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--primary-red);
 }
 
+/* IMAGE */
 .category-image {
   display: flex;
   align-items: center;
@@ -53,33 +59,50 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  transition: transform 0.35s ease;
 }
 
+/* Slight zoom on hover */
+.category-card:hover img{
+  transform: scale(1.08);
+}
+
+/* FOOTER */
 .category-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* NAME */
 .category-name {
-  color: #ffffff;
+  color: var(--white);
   font-size: 24px;
   letter-spacing: 2px;
   font-weight: 500;
+  transition: 0.3s;
 }
 
+/* ARROW */
 .category-arrow {
-  color: #ffffff;
+  color: var(--white);
   font-size: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* HOVER EFFECTS */
 .category-card:hover .category-arrow {
   transform: translateX(6px);
+  color: var(--primary-red);
+}
+
+.category-card:hover .category-name{
+  color: var(--primary-red);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+
   .shop-category {
     padding: 60px 20px;
   }
@@ -88,4 +111,5 @@
     font-size: 28px;
     letter-spacing: 4px;
   }
+
 }

@@ -1,13 +1,13 @@
 import React from "react";
 import "./herosection.css";
 import { FiArrowDown } from "react-icons/fi";
-import herovideo from "../../assets/videos/herovid.mp4";
+import herovideo from "../../assets/videos/heroimg.mp4";
 
 const heroData = {
   title: "GALLEON 100 SD",
   subtitle: "A NEW ERA OF INPUT",
   videoUrl: herovideo,
-  buttonText: "SHOP NOW",
+  buttonText: "VIEW DETAILS",
       buttonLink: "/product/galleon-100-sd"
 };
 const HeroSection = () => {

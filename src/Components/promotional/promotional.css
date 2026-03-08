@@ -1,8 +1,7 @@
 .promo-section {
-  background-color: #0b0f1a;
-  padding:60px 80px;
-  /* font-family: inherit; */
-  /* font-family: "Inter", "Helvetica Neue", Arial, sans-serif; */
+  background-color: var(--black);
+  padding: 60px 80px;
+  font-family: "Saira", sans-serif;
 }
 
 /* MAIN WRAPPER */
@@ -12,6 +11,7 @@
   height: 650px;
   gap: 20px;
 }
+
 .promo-column {
   display: flex;
   flex-direction: column;
@@ -22,18 +22,29 @@
   display: grid;
   grid-template-columns: 1fr 1fr; /* text + image */
   flex: 1;
-  background: #141827;
+  background: var(--deep-black);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.promo-row:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(225,6,0,0.25);
+}
+
 /* ======================
    LEFT SIDE
 ====================== */
-
 .promo-left {
   position: relative;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: flex-end;
+  transition: transform 0.4s ease;
+}
+
+.promo-left:hover {
+  transform: scale(1.02);
 }
 
 .promo-overlay {
@@ -41,22 +52,25 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(8, 10, 20, 0.95),
-    rgba(8, 10, 20, 0.2)
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.2)
   );
+  transition: background 0.3s ease;
 }
 
 .promo-left-content {
   position: relative;
   padding: 40px;
-  color: #fff;
+  color: var(--white);
 }
 
+/* LEFT CONTENT TEXT */
 .promo-left-content h2 {
   font-size: 28px;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
+  color: var(--white);
 }
 
 .promo-left-content p {
@@ -65,36 +79,44 @@
   margin-bottom: 15px;
 }
 
+/* LINKS */
 .promo-left-content a {
-  color: #ece81a;
+  color: var(--primary-red);
   font-weight: 600;
   font-size: 16px;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.promo-left-content a:hover {
+  color: var(--dark-red);
+  transform: translateX(4px);
 }
 
 /* ======================
    RIGHT SIDE
 ====================== */
-
 .promo-right {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* RIGHT ROW */
 .promo-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
-  background: #141827;
+  background: var(--deep-black);
 }
 
+/* TEXT AREA */
 .promo-text {
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
+  color: var(--white);
 }
 
 .promo-text h2 {
@@ -112,13 +134,49 @@
 }
 
 .promo-text a {
-  color: #ece81a;
+  color: var(--primary-red);
   font-weight: 600;
   font-size: 16px;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
+.promo-text a:hover {
+  color: var(--dark-red);
+  transform: translateX(4px);
+}
+
+/* IMAGE AREA */
 .promo-image {
   background-size: cover;
   background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.promo-image:hover {
+  transform: scale(1.03);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .promo-wrapper {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .promo-row {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-left-content, .promo-text {
+    padding: 20px;
+  }
+
+  .promo-left-content h2, .promo-text h2 {
+    font-size: 24px;
+  }
+
+  .promo-left-content p, .promo-text p {
+    font-size: 14px;
+  }
 }

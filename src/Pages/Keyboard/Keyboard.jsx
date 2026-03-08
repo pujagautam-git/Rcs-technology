@@ -9,10 +9,10 @@ const keyboardData ={
   "hero": {
     "smallTitle": "GAMING SERIES",
     "title": "MECHANICAL KEYBOARDS",
-    "subtitle": "PRECISION. SPEED. PERFORMANCE.",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "backgroundImage": "/images/keyboards/keyboard-hero.avif",
-    "buttonText": "SHOP KEYBOARDS",
-    "buttonLink": "/shop/keyboards"
+    // "buttonText": "SHOP KEYBOARDS",
+    // "buttonLink": "/shop/keyboards"
   }
 }
 const KeyboardHero = () => {

@@ -6,8 +6,9 @@
   background-position: center;
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--white);
   overflow: hidden;
+  font-family: "Saira", sans-serif;
 }
 
 /* Dark overlay */
@@ -17,12 +18,14 @@
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.85) 40%,
-    rgba(0, 0, 0, 0.4) 70%,
+    rgba(0, 0, 0, 0.6) 70%,
     rgba(0, 0, 0, 0.1) 100%
   );
   z-index: 1;
+  transition: background 0.3s ease;
 }
 
+/* Container */
 .custom-container {
   position: relative;
   z-index: 2;
@@ -39,38 +42,63 @@
   width: 50%;
 }
 
+/* SMALL TITLE */
 .custom-small-title {
   font-size: 16px;
   letter-spacing: 3px;
   margin-bottom: 15px;
-  color: #00e0ff;
+  color: var(--primary-red);
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.custom-small-title:hover {
+  transform: translateX(4px);
+  color: var(--dark-red);
+}
+
+/* MAIN TITLE */
 .custom-title {
   font-size: 64px;
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.1;
+  color: var(--white);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.2s;
 }
 
+/* SUBTITLE */
 .custom-subtitle {
   font-size: 22px;
-  color: #00e0ff;
+  color: #dddddd;
   margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.4s;
 }
 
+/* BUTTON */
 .custom-btn {
   display: inline-block;
   padding: 14px 28px;
-  background: #d4ff00;
-  color: black;
+  background: var(--primary-red);
+  color: var(--white);
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.6s;
 }
 
 .custom-btn:hover {
-  background: white;
+  background: var(--dark-red);
+  transform: translateY(-2px);
 }
 
 /* RIGHT SIDE */
@@ -78,12 +106,36 @@
   width: 45%;
   display: flex;
   justify-content: flex-end;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fadeInRight 1s forwards;
+  animation-delay: 0.8s;
 }
 
 .custom-right img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.custom-right img:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* RESPONSIVE */

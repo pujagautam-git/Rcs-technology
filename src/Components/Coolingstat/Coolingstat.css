@@ -1,24 +1,28 @@
 .cooling-stats-section {
   position: relative;
   width: 100%;
-  padding: 20px 0;
+  padding: 40px 0;
   background-size: cover;
-  /* background-position: center; */
+  background-position: center;
   text-align: center;
-  color: white;
+  color: var(--white);
+  font-family: "Saira", sans-serif;
+  overflow: hidden;
 }
 
+/* Overlay for contrast */
 .cooling-stats-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(74, 74, 74, 0.85),
-    /* rgba(0, 0, 0, 0.6) */
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.6)
   );
   z-index: 1;
 }
 
+/* Container */
 .cooling-stats-container {
   position: relative;
   z-index: 2;
@@ -29,23 +33,66 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
+/* Individual stat */
 .cooling-stat-item {
   flex: 1;
   min-width: 200px;
   margin: 30px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
 }
 
+/* Staggered animation delay for multiple items */
+.cooling-stat-item:nth-child(1) { animation-delay: 0.2s; }
+.cooling-stat-item:nth-child(2) { animation-delay: 0.4s; }
+.cooling-stat-item:nth-child(3) { animation-delay: 0.6s; }
+.cooling-stat-item:nth-child(4) { animation-delay: 0.8s; }
+
+/* Numbers */
 .cooling-stat-number {
   font-size: 60px;
   font-weight: 800;
-  color: #00e0ff;
+  color: var(--primary-red);
   margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.cooling-stat-number:hover {
+  transform: scale(1.1);
+  color: var(--dark-red);
+}
+
+/* Labels */
 .cooling-stat-label {
   font-size: 14px;
   letter-spacing: 2px;
-  color: #ccc;
+  color: #cccccc;
+  text-transform: uppercase;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cooling-stats-container {
+    flex-direction: column;
+  }
+
+  .cooling-stat-item {
+    margin: 20px 0;
+  }
+
+  .cooling-stat-number {
+    font-size: 48px;
+  }
 }
