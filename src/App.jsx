@@ -7,6 +7,7 @@ import CategoryPage from "./Pages/CategoryPage/CategoryPage.jsx";
 import SingleProduct from "./Pages/SingleProduct/singleproduct.jsx";
 import CustomSection from "./Pages/Customcooling/Customcooling.jsx";
 import KeyboardHero from "./Pages/Keyboard/Keyboard.jsx";
+import Contact from "./Pages/ContactUs/Contactus.jsx";
 import './App.css'
 
 
@@ -22,6 +23,7 @@ const App =() => {
         <Route path="/custom-cooling" element={<CustomSection />} />
      <Route path="/keyboards" element={<KeyboardHero />} />
       <Route path="/faq" element={<FAQ />} />
+      <Route path="/contact-us" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

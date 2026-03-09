@@ -10,7 +10,8 @@ const keyboardData ={
     "smallTitle": "GAMING SERIES",
     "title": "MECHANICAL KEYBOARDS",
     "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "backgroundImage": "/images/keyboards/keyboard-hero.avif",
+     "backgroundVideo": "/videos/keyvideo.mp4"
+    // "backgroundImage": "/images/keyboards/keyboard-hero.avif",
     // "buttonText": "SHOP KEYBOARDS",
     // "buttonLink": "/shop/keyboards"
   }
@@ -21,9 +22,18 @@ const KeyboardHero = () => {
   return (
     <>
     <section
-      className="keyboard-hero"
-      style={{ backgroundImage: `url(${data.backgroundImage})` }}
-    >
+      className="keyboard-hero">
+       {/* style={{ backgroundImage: `url(${data.backgroundImage})` }} */}
+     <video
+          className="keyboard-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={data.backgroundVideo} type="video/mp4" />
+        </video>
+
       <div className="keyboard-overlay"></div>
 
       <div className="keyboard-hero-content">

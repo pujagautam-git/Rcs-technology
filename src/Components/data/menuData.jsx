@@ -93,7 +93,7 @@ export const menuData = [
         icon: "pc",
         heading: "PC COMPONENTS",
         links: [
-            { label: "Contact Us", path: "/Contactus" },
+            { label: "Contact Us", path: "/Contact-us" },
     { label: "Become a Partner", path: "/Become a Partner" },
          
         ],
