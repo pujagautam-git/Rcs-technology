@@ -27,7 +27,7 @@ export const menuData = [
         heading: "GAMING GEAR",
         links: [
         { label: "Keyboards", path: "/keyboards" },
-    { label: "Headsets", path: "/head-sets" },
+    { label: "Headsets", path: "/headsets" },
     { label: "Mice", path: "/mice" },
     { label: "Mousepads", path: "/mousepads" },
     {label:"Monitor Arms", path: "/monitor-arms"},
