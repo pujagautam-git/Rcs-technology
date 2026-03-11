@@ -48,7 +48,7 @@ export const menuData = [
         heading: "GAMING FURNITURE",
         links: [
             { label: "Desks", path: "/desks" },
-    { label: "Chairs", path: "/chairs" },
+    { label: "Chairs", path: "/gaming-chairs" },
           
 
         ],

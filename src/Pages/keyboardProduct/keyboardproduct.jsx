@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import productimg from "../../assets/productdetails/detailsimage.avif";
 import productimg2 from "../../assets/productdetails/detailsimage2.avif";
 import productimg3 from "../../assets/productdetails/detailsimage3.avif";
-import "./singleproduct.css";
+import "./keyboardproduct.css";
 
 const product = {
   name: "VANGUARD 96 Mechanical Gaming Keyboard, CORSAIR MLX Plasma (TH)",
@@ -70,7 +70,7 @@ const product = {
   
 };
 
-const SingleProduct = () => {
+const KeyboardProduct = () => {
   const [selectedImage, setSelectedImage] = useState(product.images[0]);
   const [selectedColor, setSelectedColor] = useState("Black");
   const [selectedLayout, setSelectedLayout] = useState("TH - Thai Layout");
@@ -275,4 +275,4 @@ const SingleProduct = () => {
   );
 };
 
-export default SingleProduct;
+export default KeyboardProduct;

@@ -9,7 +9,7 @@ const miceData = {
     title: "PRECISION GAMING MICE",
     subtitle:
       "Engineered for speed, accuracy, and control. Discover gaming mice designed for competitive performance and ultimate comfort.",
-    backgroundVideo: "/videos/micevideo.mp4"
+    backgroundVideo: "/videos/mouse.mp4"
   }
 };
 

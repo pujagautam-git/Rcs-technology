@@ -9,7 +9,7 @@ const headsetData = {
     title: "GAMING HEADSETS",
     subtitle:
       "Experience immersive sound with high-performance gaming headsets designed for crystal-clear communication and powerful audio.",
-    backgroundVideo: "/videos/headsetvideo.mp4"
+    backgroundVideo: "/videos/headset.mp4"
   }
 };
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 // import data from "./keyboardfeature.json";
+import TechnologySlider from "../TechnologySlider";
 import "./keyboardfeature.css";
 
 const keydata={
@@ -101,46 +102,71 @@ const keydata={
       ]
     },
 
-      {
-      "id": "features",
-      "title": "KEY FEATURES TO CONSIDER",
-      "subtitle": "CHOOSING THE RIGHT KEYBOARD",
-      "type": "featureCards",
-      "cards": [
-        {
-          "id": "connection",
-          "title": "CONNECTION TYPE",
-          "image": "/images/keyboards/features/connection.jpg"
-        },
-        {
-          "id": "use-case",
-          "title": "YOUR KEYBOARD USE CASE(S)",
-          "image": "/images/keyboards/features/usecase.jpg"
-        },
-        {      
-          "id": "switches",
-          "title": "SWITCHES",
-          "image": "/images/keyboards/features/switches.jpg"
-        }, 
-        {
-          "id": "multi-device",
-          "title": "MULTI-DEVICE CAPABILITY",
-          "image": "/images/keyboards/features/multidevice.jpg"
-        }
-      ]
-    },
-
-
+   {
+  "id": "features",
+  "title": "KEY FEATURES TO CONSIDER",
+  "subtitle": "CHOOSING THE RIGHT KEYBOARD",
+  "type": "featureCards",
+  "cards": [
     {
-      "id": "technologies",
-      "title": "TECHNOLOGIES",
-      "type": "content",
-      "items": [
-        "AXON Hyper-Processing",
-        "Slipstream Wireless",
-        "FlashTap Technology"
-      ]
+      "id": "connection",
+      "title": "CONNECTION TYPE",
+      "image": "/images/keyboard/key2.jpg",
+      "description": "Gaming keyboards can connect via USB, wireless, or Bluetooth. Wired connections offer the lowest latency while wireless offers flexibility."
     },
+    {
+      "id": "use-case",
+      "title": "YOUR KEYBOARD USE CASE(S)",
+      "image": "/images/keyboard/key3.jpg",
+      "description": "People use keyboards in different ways. Gamers require advanced features like rapid trigger, programmable keys and high polling rates."
+    },
+    {
+      "id": "switches",
+      "title": "SWITCHES",
+      "image": "/images/products/key1.avif",
+      "description": "Mechanical switches determine typing feel, sound and actuation. Choose between linear, tactile or clicky switches."
+    },
+    {
+      "id": "multi-device",
+      "title": "MULTI-DEVICE CAPABILITY",
+      "image": "/images/keyboard/keyboard.avif",
+      "description": "Some keyboards allow switching between multiple devices such as PC, laptop or tablet using Bluetooth or dedicated buttons."
+    }
+  ]
+},
+   {
+  "id": "technologies",
+  "title": "GAME-CHANGING TECH FOR VICTORY",
+  "type": "technologySlider",
+  "slides": [
+    {
+      "id": "rapid-trigger",
+      "label": "LIGHTNING-FAST RESPONSE",
+      "title": "RAPID TRIGGER MODE",
+      "description": "Rapid trigger mode enables hyper-quick movements that simply aren’t possible on conventional gaming keyboards. With Rapid Trigger enabled, keys instantly reset the moment they travel upward.",
+      "mediaType": "image",
+      "media": "/images/keyboard/keyslide.avif"
+    },
+    {
+      "id": "custom-macros",
+      "label": "PERSONALIZED CONTROL",
+      "title": "CUSTOM MACRO ENGINE",
+      "description": "Customize every keystroke with advanced macro programming. Create complex actions and execute them instantly to gain a tactical advantage.",
+      "mediaType": "video",
+      "media": "/videos/keyvid1.webm"
+    },
+    {
+  "id": "axon-processing",
+  "label": "ULTRA FAST ENGINE",
+  "title": "AXON HYPER-PROCESSING",
+  "description": "Processes inputs up to 8x faster than standard gaming keyboards for ultra-low latency.",
+  "mediaType": "image",
+  "media": "/images/keyboard/keyslide.avif"
+}
+  ],
+  "autoPlay": true,
+  "delay": 6000
+},
 
     {
       "id": "accessories",
@@ -189,6 +215,7 @@ const KeyboardFeature= () => {
   const { navigation, sections } = keydata;
   const [active, setActive] = useState(navigation.defaultActive);
   const refs = useRef({});
+  const [openCard, setOpenCard] = useState(null);
 
   const handleScrollTo = (id) => {
     refs.current[id]?.scrollIntoView({
@@ -282,34 +309,55 @@ const KeyboardFeature= () => {
             </div>
           )}
 
-{/* FEATURE CARDS */}
-{section.type === "featureCards" && (
+    {section.type === "featureCards" && (
   <div className="feature-wrapper">
     {section.subtitle && (
       <p className="feature-subtitle">{section.subtitle}</p>
     )}
 
-    {/* <h2 className="feature-title">{section.title}</h2> */}
-
     <div className="feature-scroll">
-      {section.cards.map((card) => (
-        <div
-          key={card.id}
-          className="feature-card"
-          style={{ backgroundImage: `url(${card.image})` }}
-        >
-          <div className="feature-overlay" />
+      {section.cards.map((card) => {
+        const isOpen = openCard === card.id;
 
-          <div className="feature-content">
-            <h3>{card.title}</h3>
-            <span className="feature-plus">+</span>
+        return (
+          <div
+            key={card.id}
+            className={`feature-card ${isOpen ? "open" : ""}`}
+            style={{ backgroundImage: `url(${card.image})` }}
+          >
+            <div className="feature-overlay" />
+
+            <div className="feature-inner">
+
+              <h3>{card.title}</h3>
+
+              {isOpen && (
+                <p className="feature-desc">
+                  {card.description}
+                </p>
+              )}
+
+            </div>
+
+            {/* SAME BUTTON POSITION ALWAYS */}
+            <span
+              className="feature-toggle"
+              onClick={() =>
+                setOpenCard(isOpen ? null : card.id)
+              }
+            >
+              {isOpen ? "✕" : "+"}
+            </span>
+
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   </div>
 )}
-         
+       {section.type === "technologySlider" && (
+  <TechnologySlider data={section} />
+)}  
         
         {section.type === "guidesGrid" && (
   <div className="guides-wrapper">

@@ -59,7 +59,7 @@ const CategoryPage = () => {
         </div>
       </div>
 
-      <div className="category-content">
+      <div className="category-main">
         <CategorySidebar
           filtersData={data.filters}
           activeFilters={filters}

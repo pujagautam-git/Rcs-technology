@@ -75,7 +75,7 @@ const shopCategories = [
     id: 10,
     title: "Chairs",
     image: Chair,
-    slug: "/category/chairs"
+    slug: "/gaming-chairs"
   }
 ];
 

@@ -1,0 +1,89 @@
+{
+  "category": "Gaming Chairs",
+
+  "productsCategories": [
+    {
+      "id": 1,
+      "title": " Gaming Chairs",
+      "image": "/images/chairs/chair1.avif"
+    },
+    {
+      "id": 2,
+      "title": "Gaming Desks",
+      "image": "/images/chairs/chair2.avif"
+    }
+   
+  ],
+
+  "categoryList": [
+    "All Products",
+    "Fabric Gaming Chairs",
+    "Leather Gaming Chairs",
+    "Ergonomic Gaming Chairs",
+    "Premium Gaming Chairs"
+  ],
+
+  "filters": {
+    "adjustableArmrests": ["Yes", "No"],
+    "adjustableBackAngle": ["90° - 135°", "90° - 160°", "90° - 180°"],
+    "lumbarPillow": ["Included", "Not Included"],
+    "neckPillow": ["Included", "Not Included"],
+    "tiltAngle": ["10°", "15°", "20°"],
+    "armrestType": ["2D", "3D", "4D"]
+  },
+
+  "products": [
+    {
+      "id": 1,
+      "name": "TC500 LUXE Gaming Chair - Sherwood",
+      "price": 499,
+      "image": "/images/chairs/chair1.avif",
+      "category": "Fabric Gaming Chairs",
+      "adjustableArmrests": "Yes",
+      "adjustableBackAngle": "90° - 160°",
+      "lumbarPillow": "Included",
+      "neckPillow": "Included",
+      "tiltAngle": "15°",
+      "armrestType": "4D"
+    },
+    {
+      "id": 2,
+      "name": "T3 RUSH Fabric Gaming Chair - Grey",
+      "price": 329,
+      "image": "/images/chairs/chair2.avif",
+      "category": "Fabric Gaming Chairs",
+      "adjustableArmrests": "Yes",
+      "adjustableBackAngle": "90° - 160°",
+      "lumbarPillow": "Included",
+      "neckPillow": "Included",
+      "tiltAngle": "10°",
+      "armrestType": "4D"
+    },
+    {
+      "id": 3,
+      "name": "T1 RACE Gaming Chair - Black",
+      "price": 399,
+      "image": "/images/chairs/chair3.avif",
+      "category": "Leather Gaming Chairs",
+      "adjustableArmrests": "Yes",
+      "adjustableBackAngle": "90° - 180°",
+      "lumbarPillow": "Included",
+      "neckPillow": "Included",
+      "tiltAngle": "20°",
+      "armrestType": "4D"
+    },
+    {
+      "id": 4,
+      "name": "TC200 Gaming Chair",
+      "price": 299,
+      "image": "/images/chairs/chair4.avif",
+      "category": "Ergonomic Gaming Chairs",
+      "adjustableArmrests": "No",
+      "adjustableBackAngle": "90° - 135°",
+      "lumbarPillow": "Not Included",
+      "neckPillow": "Not Included",
+      "tiltAngle": "10°",
+      "armrestType": "2D"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+import gamingChairData from "../../Components/data/gamingchairs.json";
+import SubCategoryRow from "../../Components/CategoryList/SubCategoryRow";
+import CategorySidebar from "../../Components/CategoryList/CategorySidebar";
+import ProductGrid from "../../Components/CategoryList/ProductGrid";      
+import "../../styles/category.css";
+
+const GamingChairs = () => {
+
+  const [filters, setFilters] = useState({});
+  const [sortOption, setSortOption] = useState("featured");
+
+  let filteredProducts = [...gamingChairData.products];
+
+  /* FILTER LOGIC */
+  Object.keys(filters).forEach((filterKey) => {
+    if (filters[filterKey]?.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        filters[filterKey].includes(product[filterKey])
+      );
+    }
+  });
+
+  /* SORT LOGIC */
+  if (sortOption === "priceLow") {
+    filteredProducts.sort((a, b) => a.price - b.price);
+  } else if (sortOption === "priceHigh") {
+    filteredProducts.sort((a, b) => b.price - a.price);
+  }
+
+  return (
+    <div className="category-container">
+
+      {/* BREADCRUMB */}
+      <div className="breadcrumb">
+        <Link to="/">Home</Link> / Gaming Furniture / Gaming Chairs
+      </div>
+     
+      <SubCategoryRow subCategories={gamingChairData.productsCategories} />
+
+      {/* TITLE */}
+      <h1 className="category-title">Gaming Chairs</h1>
+
+      <div className="category-main">
+
+        {/* SIDEBAR */}
+        <CategorySidebar
+          filtersData={gamingChairData.filters}
+          activeFilters={filters}
+          setFilters={setFilters}
+          categories={["All Products", "Gaming Desks", "Gaming Chairs"]}
+        />
+
+        {/* RIGHT SIDE */}
+        <div className="category-right">
+
+          {/* SORT BAR */}
+          <div className="sort-bar">
+            <span>SORT BY:</span>
+
+            <select
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value)}
+            >
+              <option value="featured">Featured</option>
+              <option value="priceLow">Price: Low to High</option>
+              <option value="priceHigh">Price: High to Low</option>
+            </select>
+          </div>
+
+          {/* PRODUCTS */}
+          <ProductGrid products={filteredProducts} />
+
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default GamingChairs;

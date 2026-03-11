@@ -110,9 +110,16 @@
 }
 
 /* ---------------- SIDEBAR ---------------- */
-
+.category-main{
+  display:flex;
+  gap:60px;
+}
 .category-sidebar {
   width: 270px;
+  flex-shrink: 0;
+}
+.category-right{
+  flex:1;
 }
 
 .sidebar-section {
@@ -192,7 +199,7 @@
   flex: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px 40px;
+  gap: 50px 20px;
 }
 
 .product-card {

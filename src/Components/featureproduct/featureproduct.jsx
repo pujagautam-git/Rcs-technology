@@ -13,7 +13,7 @@ const featuredProducts = [
     title: "XENON EDGE",
     subtitle: "NOW IN ATOMIC PURPLE, BLACK AND WHITE",
     image: highlight3,
-    buttonText: "SHOP NOW",
+    buttonText: "VIEW PRODUCT",
     link: "/product/xenon-edge"
   },
   {
@@ -21,7 +21,7 @@ const featuredProducts = [
     title: "FRAME 4500X",
     subtitle: "PANORAMIC GLASS MID-TOWER PC CASE",
     image: highlight4,
-    buttonText: "SHOP NOW",
+    buttonText: "VIEW PRODUCT",
     link: "/product/frame-4500x"
   }
 ];

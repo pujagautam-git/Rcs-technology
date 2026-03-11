@@ -9,7 +9,7 @@ const highlightData = [
     title: "FRAME 4000D",
     subtitle: "VAULT SERIES WITH CHROMATIC PAINT",
     image: highlightfirst,
-    buttonText: "SHOP NOW",
+    buttonText: "VIEW DETAILS",
     buttonLink: "/products/frame-4000d",
     align: "left"
   },
@@ -18,7 +18,7 @@ const highlightData = [
     title: "AIR 5400",
     subtitle: "TRIPLE-CHAMBER CHAMPION",
     image: highlightsecond,
-    buttonText: "SHOP NOW",
+    buttonText: "VIEW DETAILS",
     buttonLink: "/products/air-5400",
     align: "right"
   }

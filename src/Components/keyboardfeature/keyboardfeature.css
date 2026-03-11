@@ -202,8 +202,12 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
   border: 1px solid #222;
   transition: transform 0.4s ease;
+  overflow: hidden;
 }
 
 .feature-card:hover {
@@ -216,29 +220,38 @@ body {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.9),
-    rgba(0,0,0,0.2)
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0.25)
   );
 }
 
-/* CONTENT */
-.feature-content {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  right: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* INNER CONTENT */
+.feature-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
 }
 
-.feature-content h3 {
+.feature-inner h3 {
   font-size: 20px;
   line-height: 1.3;
+  color: #fff;
 }
 
-/* PLUS ICON */
-.feature-plus {
+/* DESCRIPTION (FAQ STYLE) */
+.feature-desc {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #cfcfcf;
+  line-height: 1.6;
+  animation: fadeIn 0.35s ease;
+}
+
+/* TOGGLE BUTTON (+ / X) */
+.feature-toggle {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
   width: 36px;
   height: 36px;
   border: 2px solid var(--primary-red);
@@ -248,6 +261,73 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.feature-toggle:hover {
+  background: var(--primary-red);
+  color: #000;
+}
+
+/* SMOOTH TEXT APPEAR */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tech-slider{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  padding:80px 10%;
+  background:#000;
+  color:white;
+}
+
+.tech-left{
+  width:40%;
+}
+
+.tech-label{
+  color:#f1f500;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.tech-left h2{
+  font-size:36px;
+  margin:10px 0;
+}
+
+.tech-left p{
+  color:#aaa;
+  line-height:1.6;
+}
+
+.tech-pause{
+  margin-top:20px;
+  padding:10px 20px;
+  background:#f1f500;
+  border:none;
+  cursor:pointer;
+}
+
+.tech-right{
+  width:60%;
+}
+
+.tech-right img,
+.tech-right video{
+  width:100%;
+  border-radius:8px;
 }
 
 /* GUIDES SECTION */
