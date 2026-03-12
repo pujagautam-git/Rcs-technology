@@ -12,6 +12,8 @@ import MiceHero from "./Pages/Mice/Mice.jsx";
 import MousePadHero from "./Pages/MousePad/MousePad.jsx";
 import MonitorArmHero from "./Pages/MonitorArm/MonitorArm.jsx";
 import GamingChairs from "./Pages/GamingChair/GamingChair";
+import GamingDesks from "./Pages/GamingDesks/GamingDesks.jsx";
+import GamingFurniture from "./Pages/GamingFurniture/GamingFurniture.jsx";
 import Contact from "./Pages/ContactUs/Contactus.jsx";
 import './App.css'
 
@@ -34,7 +36,8 @@ const App =() => {
       <Route path="/faq" element={<FAQ />} />
       <Route path="/contact-us" element={<Contact />} />
       <Route path="/gaming-chairs" element={<GamingChairs />} />
-      
+      <Route path="/gaming-desks" element={<GamingDesks />} />
+      <Route path="/gaming-furniture" element={<GamingFurniture />} />
       </Routes>
       <Footer />
     </div>

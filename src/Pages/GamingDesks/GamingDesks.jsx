@@ -1,29 +1,30 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import gamingChairData from "../../Components/data/gamingchairs.json";
-import SubCategoryRow from "../../Components/CategoryList/SubCategoryRow";
+import gamingDeskData from "../../Components/data/gamingdesks.json";
+
 import CategorySidebar from "../../Components/CategoryList/CategorySidebar";
-import ProductGrid from "../../Components/CategoryList/ProductGrid";      
+import ProductGrid from "../../Components/CategoryList/ProductGrid";
+
 import "../../styles/category.css";
 
-const GamingChairs = () => {
+const GamingDesks = () => {
 
   const [filters, setFilters] = useState({});
   const [sortOption, setSortOption] = useState("featured");
 
-  let filteredProducts = [...gamingChairData.products];
+  let filteredProducts = [...gamingDeskData.products];
 
-  /* FILTER LOGIC */
-  Object.keys(filters).forEach((filterKey) => {
-    if (filters[filterKey]?.length > 0) {
+  /* FILTER */
+  Object.keys(filters).forEach((key) => {
+    if (filters[key]?.length > 0) {
       filteredProducts = filteredProducts.filter((product) =>
-        filters[filterKey].includes(product[filterKey])
+        filters[key].includes(product[key])
       );
     }
   });
 
-  /* SORT LOGIC */
+  /* SORT */
   if (sortOption === "priceLow") {
     filteredProducts.sort((a, b) => a.price - b.price);
   } else if (sortOption === "priceHigh") {
@@ -33,30 +34,23 @@ const GamingChairs = () => {
   return (
     <div className="category-container">
 
-      {/* BREADCRUMB */}
       <div className="breadcrumb">
-        <Link to="/">Home</Link> / Gaming Furniture / Gaming Chairs
+        <Link to="/">Home</Link> / Gaming Furniture / Gaming Desks
       </div>
-     
-      <SubCategoryRow subCategories={gamingChairData.productsCategories} />
 
-      {/* TITLE */}
-      <h1 className="category-title">Gaming Chairs</h1>
+      <h1 className="category-title">Gaming Desks</h1>
 
       <div className="category-main">
 
-        {/* SIDEBAR */}
         <CategorySidebar
-          filtersData={gamingChairData.filters}
+          filtersData={gamingDeskData.filters}
           activeFilters={filters}
           setFilters={setFilters}
-          categories={gamingChairData.categoryList}
+          categories={gamingDeskData.categoryList}
         />
 
-        {/* RIGHT SIDE */}
         <div className="category-right">
 
-          {/* SORT BAR */}
           <div className="sort-bar">
             <span>SORT BY:</span>
 
@@ -70,7 +64,6 @@ const GamingChairs = () => {
             </select>
           </div>
 
-          {/* PRODUCTS */}
           <ProductGrid products={filteredProducts} />
 
         </div>
@@ -80,4 +73,4 @@ const GamingChairs = () => {
   );
 };
 
-export default GamingChairs;
+export default GamingDesks;

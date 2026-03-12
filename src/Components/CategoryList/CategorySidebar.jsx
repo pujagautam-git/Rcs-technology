@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 const CategorySidebar = ({
@@ -35,7 +36,8 @@ const CategorySidebar = ({
         <ul className="category-list">
           {categories.map((cat, i) => (
             <li key={i} className={i === 0 ? "active" : ""}>
-              {cat}
+              {/* {cat} */}
+                  <Link to={cat.link}>{cat.name}</Link>
             </li>
           ))}
         </ul>

@@ -1,0 +1,88 @@
+{
+  "category": "Gaming Desks",
+
+  "categoryList": [
+    {
+    "name": "All Products",
+    "link": "/gaming-furniture"
+  },
+  {
+    "name": "Gaming Desks",
+    "link": "/gaming-desks"
+  },
+  {
+    "name": "Gaming Chairs",
+    "link": "/gaming-chairs"
+  }
+  ],
+
+  "filters": {
+    "color": ["Black", "White", "Walnut"],
+    "height": ["Fixed Height", "Adjustable"],
+    "usb": ["Yes", "No"],
+    "warranty": ["2 Years", "3 Years", "5 Years"],
+    "weight": ["50kg", "75kg", "100kg"]
+  },
+
+  "products": [
+    {
+      "id": "desk1",
+      "name": "Platform:4 Pegboard Desk Organizer - White",
+      "price": 129,
+      "image": "/images/desks/desk1.png",
+      "color": "White",
+      "height": "Fixed Height",
+      "usb": "No",
+      "warranty": "2 Years",
+      "weight": "50kg"
+    },
+
+    {
+      "id": "desk2",
+      "name": "Platform:4 Cable Management Tray - Black",
+      "price": 89,
+      "image": "/images/desks/desk2.png",
+      "color": "Black",
+      "height": "Fixed Height",
+      "usb": "No",
+      "warranty": "2 Years",
+      "weight": "50kg"
+    },
+
+    {
+      "id": "desk3",
+      "name": "Platform:4 Desk Extension Birch Solid Wood",
+      "price": 159,
+      "image": "/images/desks/desk3.png",
+      "color": "Walnut",
+      "height": "Fixed Height",
+      "usb": "No",
+      "warranty": "3 Years",
+      "weight": "75kg"
+    },
+
+    {
+      "id": "desk4",
+      "name": "Platform:4 Standing Desk Frame",
+      "price": 499,
+      "image": "/images/desks/desk4.png",
+      "color": "Black",
+      "height": "Adjustable",
+      "usb": "Yes",
+      "warranty": "5 Years",
+      "weight": "100kg"
+    },
+
+    {
+      "id": "desk5",
+      "name": "Platform:4 Desk Leg Set",
+      "price": 199,
+      "image": "/images/desks/desk5.png",
+      "color": "White",
+      "height": "Adjustable",
+      "usb": "No",
+      "warranty": "3 Years",
+      "weight": "75kg"
+    }
+  ]
+}

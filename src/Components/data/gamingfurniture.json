@@ -1,7 +1,20 @@
 {
-  "category": "Gaming Chairs",
+  "category": "Gaming Furniture",
 
- 
+  "productsCategories": [
+    {
+      "id": 1,
+      "title": " Gaming Chairs",
+      "image": "/images/chairs/chair1.avif"
+    },
+    {
+      "id": 2,
+      "title": "Gaming Desks",
+      "image": "/images/chairs/chair2.avif"
+    }
+   
+  ],
+
   "categoryList": [
    {
     "name": "All Products",

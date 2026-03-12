@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import gamingChairData from "../../Components/data/gamingchairs.json";
+import gamingFurnitureData from "../../Components/data/gamingfurniture.json";
 import SubCategoryRow from "../../Components/CategoryList/SubCategoryRow";
 import CategorySidebar from "../../Components/CategoryList/CategorySidebar";
 import ProductGrid from "../../Components/CategoryList/ProductGrid";      
 import "../../styles/category.css";
 
-const GamingChairs = () => {
+const GamingFurniture = () => {
 
   const [filters, setFilters] = useState({});
   const [sortOption, setSortOption] = useState("featured");
 
-  let filteredProducts = [...gamingChairData.products];
+  let filteredProducts = [...gamingFurnitureData.products];
 
   /* FILTER LOGIC */
   Object.keys(filters).forEach((filterKey) => {
@@ -35,22 +35,22 @@ const GamingChairs = () => {
 
       {/* BREADCRUMB */}
       <div className="breadcrumb">
-        <Link to="/">Home</Link> / Gaming Furniture / Gaming Chairs
+        <Link to="/">Home</Link> / Gaming Furniture 
       </div>
      
-      <SubCategoryRow subCategories={gamingChairData.productsCategories} />
+      <SubCategoryRow subCategories={gamingFurnitureData.productsCategories} />
 
       {/* TITLE */}
-      <h1 className="category-title">Gaming Chairs</h1>
+      <h1 className="category-title">Gaming Furniture</h1>
 
       <div className="category-main">
 
         {/* SIDEBAR */}
         <CategorySidebar
-          filtersData={gamingChairData.filters}
+          filtersData={gamingFurnitureData.filters}
           activeFilters={filters}
           setFilters={setFilters}
-          categories={gamingChairData.categoryList}
+          categories={gamingFurnitureData.categoryList}
         />
 
         {/* RIGHT SIDE */}
@@ -80,4 +80,4 @@ const GamingChairs = () => {
   );
 };
 
-export default GamingChairs;
+export default GamingFurniture;

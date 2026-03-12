@@ -70,12 +70,27 @@ const Contact=() =>{
       <section className="contact-map">
 
         <h2>Our Location</h2>
+         <iframe
+    title="map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.348102095715!2d85.31802978072989!3d27.706536514772615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a582c316cb%3A0xbf36a040e87a89a8!2sKunyo%20Gears%20(Putalisadak%20Store)!5e0!3m2!1sen!2snp!4v1773303005121!5m2!1sen!2snp"
+    width="100%"
+    height="450"
+    style={{ border: 0 }}
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
 
-        <iframe
+{/* 
+<iframe 
+title="map"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.348102095715!2d85.31802978072989!3d27.706536514772615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a582c316cb%3A0xbf36a040e87a89a8!2sKunyo%20Gears%20(Putalisadak%20Store)!5e0!3m2!1sen!2snp!4v1773303005121!5m2!1sen!2snp"
+ loading="lazy">
+</iframe> */}
+        {/* <iframe
           title="map"
           src="https://maps.google.com/maps?q=Kathmandu&t=&z=13&ie=UTF8&iwloc=&output=embed"
           loading="lazy"
-        ></iframe>
+        ></iframe> */}
 
       </section>
 
