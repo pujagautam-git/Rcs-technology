@@ -5,12 +5,12 @@
     {
       "id": 1,
       "title": " Gaming Chairs",
-      "image": "/images/chairs/chair1.avif"
+      "image": "/chair/chair1.avif"
     },
     {
       "id": 2,
       "title": "Gaming Desks",
-      "image": "/images/chairs/chair2.avif"
+      "image": "/desk/table.avif"
     }
    
   ],
@@ -42,10 +42,10 @@
   "products": [
     {
       "id": 1,
-      "name": "TC500 LUXE Gaming Chair - Sherwood",
+      "name": "TC500 LUXE Gaming Desk - Sherwood",
       "price": 499,
-      "image": "/images/chairs/chair1.avif",
-      "category": "Fabric Gaming Chairs",
+      "image": "desk/table1.webp",
+      "category": "Fabric Gaming Desk",
       "adjustableArmrests": "Yes",
       "adjustableBackAngle": "90° - 160°",
       "lumbarPillow": "Included",
@@ -57,7 +57,7 @@
       "id": 2,
       "name": "T3 RUSH Fabric Gaming Chair - Grey",
       "price": 329,
-      "image": "/images/chairs/chair2.avif",
+      "image": "chair/chair2.webp",
       "category": "Fabric Gaming Chairs",
       "adjustableArmrests": "Yes",
       "adjustableBackAngle": "90° - 160°",
@@ -68,9 +68,9 @@
     },
     {
       "id": 3,
-      "name": "T1 RACE Gaming Chair - Black",
+      "name": "T1 RACE Gaming Desk - Black",
       "price": 399,
-      "image": "/images/chairs/chair3.avif",
+      "image": "desk/table2.webp",
       "category": "Leather Gaming Chairs",
       "adjustableArmrests": "Yes",
       "adjustableBackAngle": "90° - 180°",
@@ -83,7 +83,7 @@
       "id": 4,
       "name": "TC200 Gaming Chair",
       "price": 299,
-      "image": "/images/chairs/chair4.avif",
+      "image": "chair/chair4.webp",
       "category": "Ergonomic Gaming Chairs",
       "adjustableArmrests": "No",
       "adjustableBackAngle": "90° - 135°",

@@ -59,11 +59,10 @@ const GamingDesks = () => {
               onChange={(e) => setSortOption(e.target.value)}
             >
               <option value="featured">Featured</option>
-              <option value="priceLow">Price: Low to High</option>
-              <option value="priceHigh">Price: High to Low</option>
+              <option value="newest">NEWEST</option>
+              <option value="popular">POPULAR</option>
             </select>
           </div>
-
           <ProductGrid products={filteredProducts} />
 
         </div>

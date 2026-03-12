@@ -7,8 +7,8 @@ font-family:"Saira",sans-serif;
 /* HERO */
 
 .contact-hero{
-height:50vh;
-background:url("/images/contact-bg.jpg") center/cover no-repeat;
+height:80vh;
+background:url("/images/contact.png") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -19,7 +19,7 @@ text-align:center;
 .contact-overlay{
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.7);
+background:rgba(33, 32, 32, 0.7);
 }
 
 .contact-hero-content{

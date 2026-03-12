@@ -27,8 +27,8 @@ const CategoryTopBar = ({
           onChange={(e) => setSortOption(e.target.value)}
         >
           <option value="default">Featured</option>
-          <option value="priceLow">Price: Low to High</option>
-          <option value="priceHigh">Price: High to Low</option>
+          <option value="newest">NEWEST</option>
+          <option value="popular">POPULAR</option>
         </select>
       </div>
     </div>

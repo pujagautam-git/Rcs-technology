@@ -31,16 +31,38 @@
     }
   ],
 
-  "categoryList": [
-    "All Products",
-    "Wireless Gaming Keyboards",
-    "Wired Gaming Keyboards",
-    "TKL Gaming Keyboards",
-    "Rapid Trigger Keyboards",
-    "75% Keyboards",
-    "60% Keyboards"
-  ],
-
+ "categoryList": [
+   {
+    "name": "All Products",
+    "link": "/gaming-keyboards"
+  },
+  {
+    "name": "Wireless Gaming Keyboards",
+    "link": "/wireless-gaming-keyboards"
+  },
+  {
+    "name":  "Wired Gaming Keyboards",
+    "link": "/wired-gaming-keyboards"
+  },
+  {
+    "name": "TKL Gaming Keyboards",
+    "link": "/tkl-gaming-keyboards"
+  },
+  {
+    "name": "Rapid Trigger Keyboards",
+    "link": "/rapid-trigger-keyboards"
+  },
+  {
+    "name": "75% Keyboards",
+    "link": "/75-percent-keyboards"
+  },
+  {
+    "name": "60% Keyboards",
+    "link": "/60-percent-keyboards"
+  }
+   ],
+  
+  
   "filters": {
     "connectivity": ["Wired", "Wireless"],
     "size": ["60%", "75%", "TKL", "Full Size"],

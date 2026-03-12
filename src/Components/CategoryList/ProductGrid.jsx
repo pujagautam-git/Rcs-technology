@@ -11,9 +11,18 @@ const ProductGrid = ({ products }) => {
           className="product-link"
         >
           <div className="product-card">
-            <img src={product.image} alt={product.name} />
-            <h4>{product.name}</h4>
-            <p>${product.price}</p>
+
+            {/* IMAGE AREA */}
+            <div className="product-image-area">
+              <img src={product.image} alt={product.name} />
+            </div>
+
+            {/* TEXT AREA */}
+            <div className="product-info">
+              <h4 className="product-title">{product.name}</h4>
+              <span className="learn-more">LEARN MORE</span>
+            </div>
+
           </div>
         </Link>
       ))}
