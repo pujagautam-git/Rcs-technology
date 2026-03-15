@@ -10,11 +10,16 @@
   align-items: center;
   padding: 18px 60px;
   position: relative;
+  z-index: 1000;
   /* border-bottom: 0.px solid var(--border-gray); */
 }
 
 /* LOGO */
 .logo {
+  position: absolute;
+  right: 60px;   /* same as navbar padding */
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,6 +42,9 @@
 .nav-links {
   display: flex;
   gap: 90px;
+   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-item {
@@ -148,8 +156,25 @@
 /* MEGA MENU */
 .mega-menu {
   position: absolute;
+  left: -35vw;
+  width: 103vw;
+  top: 40px;
+
+  background: var(--deep-black);
+/* transition: all 0.3s ease; */
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  padding: 20px 80px;
+  border-top: 1px solid #222;
+
+  z-index: 9999;
+}
+/* .mega-menu {
+  position: absolute;
   left: 0;
-  top: 70%;
+  top: 90%;
   width: 100%;
   background: var(--deep-black);
   display: flex;
@@ -158,9 +183,10 @@
   gap: 10px;
   border-top: 1px solid #222;
   z-index: 999;
-}
+} */
 
 /* COLUMN */
+
 .mega-column {
   width: 180px;
   padding: 10px;

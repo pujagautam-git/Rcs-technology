@@ -14,6 +14,7 @@ import MonitorArmHero from "./Pages/MonitorArm/MonitorArm.jsx";
 import GamingChairs from "./Pages/GamingChair/GamingChair";
 import GamingDesks from "./Pages/GamingDesks/GamingDesks.jsx";
 import GamingFurniture from "./Pages/GamingFurniture/GamingFurniture.jsx";
+import BlogPage from "./Pages/BlogPage/BlogPage.jsx";
 import Contact from "./Pages/ContactUs/Contactus.jsx";
 import './App.css'
 
@@ -38,6 +39,7 @@ const App =() => {
       <Route path="/gaming-chairs" element={<GamingChairs />} />
       <Route path="/gaming-desks" element={<GamingDesks />} />
       <Route path="/gaming-furniture" element={<GamingFurniture />} />
+      <Route path="/blog" element={<BlogPage />} />
       </Routes>
       <Footer />
     </div>

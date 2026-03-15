@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import coolerImg from "../../assets/news/article1.webp";
 import chromaticImg from "../../assets/news/article2.webp";
 import apexImg from "../../assets/news/article3.webp";
@@ -20,20 +21,21 @@ const newsData = {
       category: "BUYER'S GUIDES",
       title: "Best AIO CPU Coolers 2026",
       image: coolerImg,
+      url: "/blog",
     },
     {
       id: 2,
       category: "BLOG",
-      title:
-        "What is Chromatic Aberration in Games and Should You Enable It?",
+      title:"What is Chromatic Aberration in Games and Should You Enable It?",
       image: chromaticImg,
+      url: "/blog",
     },
     {
       id: 3,
       category: "BLOG",
-      title:
-        "What Are Shaders and Why Do Games Need to Preload Them?",
+      title:"What Are Shaders and Why Do Games Need to Preload Them?",
       image: apexImg,
+      url: "/blog",
     },
   ],
 };
@@ -58,24 +60,26 @@ const NewsSection = () => {
         )}
       </div>
 
-      <div className="news-grid">
-        {newsData.articles.map((article) => (
-          <div key={article.id} className="news-card">
-            <div className="news-image-wrapper">
-              <img src={article.image} alt={article.title} />
-            </div>
+   <div className="news-grid">
+  {newsData.articles.map((article) => (
+    <Link
+      key={article.id}
+      to={article.url}   // use 'to' instead of 'href'
+      className="news-card-link"
+    >
+      <div className="news-card">
+        <div className="news-image-wrapper">
+          <img src={article.image} alt={article.title} />
+        </div>
 
-            <div className="news-content">
-              <span className="news-category">
-                {article.category}
-              </span>
-              <h3 className="news-title">
-                {article.title}
-              </h3>
-            </div>
-          </div>
-        ))}
+        <div className="news-content">
+          <span className="news-category">{article.category}</span>
+          <h3 className="news-title">{article.title}</h3>
+        </div>
       </div>
+    </Link>
+  ))}
+</div>
     </section>
   );
 };

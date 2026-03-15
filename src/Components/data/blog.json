@@ -1,0 +1,124 @@
+{
+  "label": "BLOG",
+  "title": "Is The AIR 5400 Compatible with RS/RX MAX Fans?",
+  "updated": "Last updated: March 10, 2026",
+
+  "intro": [
+    "The CORSAIR AIR 5400 is designed from the ground up to support 120mm fans and AIOs such as the iCUE LINK TITAN 360 RX LCD or NAUTILUS 360 RS ARGB.",
+    "What about adding thicker fans? Here at CORSAIR, we make 30mm thick case fans with the RS MAX and RX MAX, so could you swap these in for improved cooling performance?"
+  ],
+
+  "heroImage": "/images/blog/blog1.webp",
+
+  "sections": [
+    {    
+      "title": "AIO Chamber",            
+      "paragraphs": [
+        "For the AIO Chamber, the answer is yes. You have 70mm of space to mount the AIO radiator and fans.",
+        "Given that our AIO radiators (and many other brands) are 27mm thick, adding 30mm thick fans still comes in below the maximum."
+      ]
+    },
+    {
+      "title": "Floor and Roof",
+      "paragraphs": [
+        "For the other case fan locations you can also install the thicker 30mm RS MAX fans.",
+        "This is the case for the bottom intake, the top exhaust, and the optional rear exhaust."
+      ],
+      "images": [
+        {
+          "src": "/images/blog/blog7.webp",
+          "caption": "Lower fans mount using the spot marks on the fan tray"
+        },
+        {
+          "src": "/images/blog/blog6.webp",
+          "caption": "For the upper fans ensure they are mounted as far left as possible"
+        }
+      ]
+    },
+    {
+      "image": "/images/blog/fan-comparison.png"
+    },
+    {
+      "title": "Are 30mm Fans Better Than 25mm Fans?",
+      "paragraphs": [
+        "When comparing the RS and RX fans to the MAX variants you can expect a performance improvement of between 15 and 17% over standard 25mm fans.",
+        "More detailed information on the difference can be found in our 35mm vs 30mm fan comparison article."
+      ]
+    }
+  ],
+
+  "productsSectionTitle": "PRODUCTS IN ARTICLE",
+
+  "products": [
+    {
+      "name": "iCUE LINK RX140 MAX RGB 140mm PWM Thick Fan Expansion - White",
+      "image": "/images/blog/blog2.png",
+      "buttons": ["Learn More", "Buy Now"]
+    },
+    {
+      "name": "RS120 MAX 120mm PWM Thick Fans - Triple Pack",
+      "image": "/images/blog/blog3.png",
+      "buttons": ["Learn More", "Buy Now"]
+    },
+    {
+      "name": "AIR 5400 RS ARGB Triple Chamber Mid-Tower PC Case - White",
+      "image": "/images/blog/blog4.png",
+      "buttons": ["Learn More", "Buy Now"]
+    },
+    {
+      "name": "AIR 5400 LX-R RGB iCUE LINK Triple Chamber Mid-Tower PC Case",
+      "image": "/images/blog/blog5.png",
+      "buttons": ["Learn More", "Buy Now"]
+    }
+  ],
+
+  "community": {
+    "title": "JOIN OUR OFFICIAL CORSAIR COMMUNITIES",
+    "description": "Join our official CORSAIR Communities! Whether you're new or old to PC Building, have questions about our products, or want to chat the latest PC tech, gaming trends, our community is the place for you.",
+    "links": [
+      "Discord",
+      "Reddit",
+      "TikTok",
+      "Bluesky",
+      "Instagram",
+      "Twitter/X",
+      "Facebook",
+      "Twitch"
+    ]
+  },
+
+  "relatedSectionTitle": "RELATED CONTENT",
+
+  "relatedBlogs": [
+    {
+      "title": "Corsair AIOs: Everything You Need To Know",
+      "image": "/images/relatedprod/rel1.webp",
+      "tag": "BLOG"
+    },
+    {
+      "title": "Corsair AIR 5400 AIO Compatibility",
+      "image": "/images/relatedprod/rel2.webp",
+      "tag": "BLOG"
+    },
+    {
+      "title": "Can I Use An Air Cooler In The Corsair AIR 5400?",
+      "image": "/images/relatedprod/rel3.webp",
+      "tag": "BLOG"
+    },
+    {
+      "title": "iCUE LINK RX120 MAX Unboxing",
+      "image": "/images/relatedprod/rel4.webp",
+      "tag": "BLOG"
+    },
+    {
+      "title": "Updating the Naming Convention for Corsair AIOs",
+      "image": "/images/relatedprod/rel5.webp",
+      "tag": "BLOG"
+    },
+    {
+      "title": "How To Install A Corsair AIO Tube Sleeving Kit",
+      "image": "/images/relatedprod/rel6.webp",
+      "tag": "HOW TO"
+    }
+  ]
+}

@@ -131,6 +131,15 @@
 .news-card:hover .news-title {
   color: var(--primary-red);
 }
+.news-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.news-card-link:hover .news-card {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
 
 /* Responsive */
 @media (max-width: 1024px) {

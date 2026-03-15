@@ -49,9 +49,12 @@ const Navbar = () => {
     <header className="navbar">
 
       {/* SEARCH ICON */}
-      <div className="search" onClick={() => setShowSearch(true)}>
-        <FiSearch />
-      </div>
+
+     {!showSearch && (
+  <div className="search" onClick={() => setShowSearch(true)}>
+    <FiSearch />
+  </div>
+)}
 
       {/* CENTER MENU */}
       <nav className="nav-links">
